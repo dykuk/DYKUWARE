@@ -33,7 +33,7 @@ game.StarterGui:SetCore(
 }
 )
 local L_3_ = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local L_4_ = L_3_.CreateLib("DYKUWARE", "DarkTheme")
+local L_4_ = L_3_.CreateLib("DYKUWARE", "Midnight")
 local L_5_ = L_4_:NewTab("Aimlock")
 local L_6_ = L_5_:NewSection("Aimlock")
 L_6_:NewButton(
@@ -42,7 +42,7 @@ L_6_:NewButton(
     function()
 	getgenv().AimPart = "HumanoidRootPart"
 	getgenv().AimlockKey = "q"
-	getgenv().AimRadius = 20
+	getgenv().AimRadius = 10
 	getgenv().ThirdPerson = true
 	getgenv().FirstPerson = true
 	getgenv().TeamCheck = false
@@ -248,17 +248,17 @@ L_6_:NewDropdown(
 	getgenv().AimPart = L_71_arg0
 end
 )
-local L_7_ = L_4_:NewTab("Silent Aim")
-local L_8_ = L_7_:NewSection("Silent Aim Duh")
+local L_7_ = L_4_:NewTab("silent")
+local L_8_ = L_7_:NewSection("silent")
 L_8_:NewButton(
-    "Silent Aim",
-    "Silent Aim Toggle Key is T.",
+    "silent",
+    "key is t.",
     function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/tayodevelup/imsoniac/main/silentaim", true))()
 end
 )
 L_8_:NewTextBox(
-    "Silent Aim Prediction",
+    "silent pre",
     "0.157 for low ping 0.178 high ping",
     function(L_72_arg0)
 	DaHoodSettings.Prediction = L_72_arg0
@@ -266,7 +266,7 @@ end
 )
 L_8_:NewDropdown(
     "Silent Aim Part",
-    "IDFK",
+    "where u gon shoot",
     {
 	"Head",
 	"UpperTorso",
@@ -279,23 +279,23 @@ end
 )
 L_8_:NewTextBox(
     "Silent Aim Fov",
-    "IDFK",
+    "fov",
     function(L_74_arg0)
 	Aiming.FOV = L_74_arg0
 end
 )
 L_8_:NewToggle(
     "Silent Aim Show Fov",
-    "IDFK",
+    "show fov or na nigga",
     function(L_75_arg0)
 	Aiming.ShowFOV = L_75_arg0
 end
 )
-local L_11_ = L_4_:NewTab("Antilock")
-local L_12_ = L_11_:NewSection("Anti-Lock")
+local L_11_ = L_4_:NewTab("antilock")
+local L_12_ = L_11_:NewSection("anti-lock")
 L_12_:NewButton(
-    "Anti-Lock",
-    "Key is H",
+    "anti-lock",
+    "key is h",
     function()
 	repeat
 		wait()
@@ -336,10 +336,10 @@ L_12_:NewButton(
 		elseif L_139_arg0:lower() == TeclasWS.tecla3:lower() then
 			if L_130_ then
 				L_130_ = false
-				anunciar_atentado_terrorista("Anti-Lock OFF")
+				anunciar_atentado_terrorista("anti-lock off")
 			else
 				L_130_ = true
-				anunciar_atentado_terrorista("Anti-Lock ON")
+				anunciar_atentado_terrorista("anti-lock on")
 			end
 		end
 	end
@@ -418,45 +418,45 @@ L_12_:NewButton(
         )
 end
 )
-local L_13_ = L_4_:NewTab("Settings")
-local L_14_ = L_13_:NewSection("Toggle Button")
+local L_13_ = L_4_:NewTab("settings")
+local L_14_ = L_13_:NewSection("toggle")
 L_14_:NewKeybind(
-    "Keybind Gui Toggle",
-    "Hides Gui",
-    Enum.KeyCode.V, -- Want to change the Toggle Button?
+    "keybind toggle",
+    "hides gui",
+    Enum.KeyCode.V, -- want to change the toggle button?
     function()
 	L_3_:ToggleUI()
 end
 )
-local L_17_ = L_4_:NewTab("ESP")
+local L_17_ = L_4_:NewTab("esp")
 local L_18_ = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
-local L_19_ = L_17_:NewSection("Find Players")
+local L_19_ = L_17_:NewSection("esp")
 L_19_:NewToggle(
     "ESP",
     "ESP",
     function(L_201_arg0)
-	L_18_:Toggle(L_201_arg0)
+	L_18_:toggle(L_201_arg0)
 end
 )
 L_19_:NewToggle(
-    "Tracers",
-    "ESP Tracers",
+    "tracers",
+    "esp tracers",
     function(L_202_arg0)
-	L_18_.Tracers = L_202_arg0
+	L_18_.tracers = L_202_arg0
 end
 )
 L_19_:NewToggle(
-    "Names",
-    "ESP Names",
+    "names",
+    "esp names",
     function(L_203_arg0)
-	L_18_.Names = L_203_arg0
+	L_18_.names = L_203_arg0
 end
 )
 L_19_:NewToggle(
-    "Boxes",
-    "ESP Boxes",
+    "boxes",
+    "esp boxes",
     function(L_204_arg0)
-	L_18_.Boxes = L_204_arg0
+	L_18_.boxes = L_204_arg0
 end
 )
 
