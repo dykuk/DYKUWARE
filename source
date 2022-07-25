@@ -33,7 +33,7 @@ game.StarterGui:SetCore(
 }
 )
 local L_3_ = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local L_4_ = L_3_.CreateLib("DYKUWARE", "Sentinel")
+local L_4_ = L_3_.CreateLib("DYKUWARE", "GrapeTheme")
 local L_5_ = L_4_:NewTab("aimlock")
 local L_6_ = L_5_:NewSection("aimlock")
 L_6_:NewButton(
@@ -394,12 +394,12 @@ L_14_:NewKeybind(
 	L_3_:ToggleUI()
 end
 )
-local L_17_ = L_4_:NewTab("ESP")
+local L_17_ = L_4_:NewTab("esp")
 local L_18_ = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
-local L_19_ = L_17_:NewSection("ESP")
+local L_19_ = L_17_:NewSection("esp")
 L_19_:NewToggle(
-    "ESP",
-    "ESP",
+    "esp",
+    "esp",
     function(L_201_arg0)
 	L_18_:toggle(L_201_arg0)
 end
