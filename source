@@ -34,11 +34,11 @@ game.StarterGui:SetCore(
 )
 local L_3_ = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local L_4_ = L_3_.CreateLib("DYKUWARE", "Midnight")
-local L_5_ = L_4_:NewTab("Aimlock")
-local L_6_ = L_5_:NewSection("Aimlock")
+local L_5_ = L_4_:NewTab("aimlock")
+local L_6_ = L_5_:NewSection("aimlock")
 L_6_:NewButton(
-    "Aimlock",
-    "Beam niggas down",
+    "aimlock",
+    "beam faggots down",
     function()
 	getgenv().AimPart = "HumanoidRootPart"
 	getgenv().AimlockKey = "q"
@@ -229,8 +229,8 @@ L_6_:NewTextBox(
 end
 )
 L_6_:NewTextBox(
-    "Aimlock Prediction",
-    "Customize your aimlock prediction",
+    "aimlock Prediction",
+    "customize your aimlock prediction",
     function(L_70_arg0)
 	PredictionVelocity = L_70_arg0
 end
@@ -463,6 +463,6 @@ end
 
 
 
-local L_13_ = L_4_:NewTab("Credits")
-local L_14_ = L_13_:NewSection("Credits")
-local L_14_ = L_13_:NewSection("Creator:dyku#1713")
+local L_13_ = L_4_:NewTab("credits")
+local L_14_ = L_13_:NewSection("credits")
+local L_14_ = L_13_:NewSection("creator:dyku#1713")
