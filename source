@@ -436,23 +436,102 @@ end
 )
 local Tab3 = Window:Tab("extra",false)
 
-Tab3:Label("extra")
-end
-)
+Tab3:Label("extra shit")
 
+game.StarterGui:SetCore("SendNotification", {
+    Title = "DYKUWARE";
+    Text = "Welcome";
+    Icon = "RBXID OR BLANK";
+    Duration = "DURATION IN SECONDS";
+    callbakc = bindableFunction;
+    Button1 = "lets go fuck niggers up!";
+})
 
+Tab3:Button("fake macro (v)",function(bool)
+    local Player = game:GetService("Players").LocalPlayer
+    local Mouse = Player:GetMouse()
+    local SpeedGlitch = false
+    local Wallet = Player.Backpack:FindFirstChild("Wallet")
 
+    local UniversalAnimation = Instance.new("Animation")
 
-Tab3:Button("FLY (X)",function(bool)
+    function stopTracks()
+        for _, v in next, game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):GetPlayingAnimationTracks() do
+            if (v.Animation.AnimationId:match("rbxassetid")) then
+                v:Stop()
+            end
+        end
+    end
+
+    function loadAnimation(id)
+        if UniversalAnimation.AnimationId == id then
+            stopTracks()
+            UniversalAnimation.AnimationId = "1"
+        else
+            UniversalAnimation.AnimationId = id
+            local animationTrack = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):LoadAnimation(UniversalAnimation)
+            animationTrack:Play()
+        end
+    end
+
+    Mouse.KeyDown:Connect(function(Key)
+        if Key == "v" then
+            SpeedGlitch = not SpeedGlitch
+            if SpeedGlitch == true then
+                stopTracks()
+                loadAnimation("rbxassetid://3189777795")
+                wait(1.5)
+                Wallet.Parent = Player.Character
+                wait(0.15)
+                Player.Character:FindFirstChild("Wallet").Parent = Player.Backpack
+                wait(0.05)
+                repeat game:GetService("RunService").Heartbeat:wait()
+                    keypress(0x49)
+                    game:GetService("RunService").Heartbeat:wait()
+                    keypress(0x4F)
+                    game:GetService("RunService").Heartbeat:wait()
+                    keyrelease(0x49)
+                    game:GetService("RunService").Heartbeat:wait()
+                    keyrelease(0x4F)
+                    game:GetService("RunService").Heartbeat:wait()
+                until SpeedGlitch == false
+            end
+        end
+    end)
+end)
+
+Tab3:Button("fly (x)",function(bool)
     loadstring(game:HttpGet("https://pastebin.com/raw/sUA9m6M6"))()
 end)
-Tab3:Button("Headless Client Sided",function(bool)
+
+Tab3:Slider("fov change",80,200,function(text)
+    workspace.CurrentCamera.FieldOfView = (text)
+end)
+
+Tab3:Button("animations",function(bool)
+    while true do
+        wait(1)
+        for i, player in ipairs(game.Players:GetChildren()) do
+        local Animate = game.Players.LocalPlayer.Character.Animate
+    Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=782841498"
+    Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=782841498"
+    Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616168032"
+    Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616163682"
+    Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=1083218792"
+    Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=1083439238"
+    Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=707829716"
+    game.Players.LocalPlayer.Character.Humanoid.Jump = false
+        end
+    end
+end)
+
+Tab3:Button("headless",function(bool)
     getgenv().game.Players.LocalPlayer.Character.Head.Transparency = 1
     getgenv().game.Players.LocalPlayer.Character.Head.face:Destroy()
     getgenv().game.Players.LocalPlayer.Character.Head.face:Destroy()
 end)
 
-Tab3:Button("Korblox Client Sided",function(bool)
+Tab3:Button("korblox",function(bool)
 	local ply = game.Players.LocalPlayer
 	local chr = ply.Character
 	chr.RightLowerLeg.MeshId = "902942093"
@@ -463,7 +542,7 @@ Tab3:Button("Korblox Client Sided",function(bool)
 	chr.RightFoot.Transparency = "1"
 end)
 
-Tab3:Button("Trash Talk (J)",function(bool)
+Tab3:Button("trash talk (J)",function(bool)
     local plr = game.Players.LocalPlayer
 repeat wait() until plr.Character
 local char = plr.Character
@@ -533,6 +612,3 @@ game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(
     )
     end
 end
- 
-game:GetService("UserInputService").InputBegan:connect(TrashTalk)
-end)
