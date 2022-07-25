@@ -398,8 +398,8 @@ local L_17_ = L_4_:NewTab("esp")
 local L_18_ = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
 local L_19_ = L_17_:NewSection("esp")
 L_19_:NewToggle(
-    "ESP",
-    "ESP",
+    "esp",
+    "esp",
     function(L_201_arg0)
 	L_18_:toggle(L_201_arg0)
 end
