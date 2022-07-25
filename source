@@ -254,7 +254,7 @@ L_8_:NewButton(
     "silent",
     "key is t.",
     function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/tayodevelup/imsoniac/main/silentaim", true))()
+	loadstring(game:HttpGet("https://pastebin.com/raw/CaXVUcrp", true))()
 end
 )
 L_8_:NewTextBox(
@@ -265,7 +265,7 @@ L_8_:NewTextBox(
 end
 )
 L_8_:NewDropdown(
-    "Silent Aim Part",
+    "silent aim part",
     "where u gon shoot",
     {
 	"Head",
@@ -278,14 +278,14 @@ L_8_:NewDropdown(
 end
 )
 L_8_:NewTextBox(
-    "Silent Aim Fov",
-    "fov",
+    "silent aim fov",
+    "field of view",
     function(L_74_arg0)
 	Aiming.FOV = L_74_arg0
 end
 )
 L_8_:NewToggle(
-    "Silent Aim Show Fov",
+    "silent aim show fov",
     "show fov or na nigga",
     function(L_75_arg0)
 	Aiming.ShowFOV = L_75_arg0
