@@ -33,7 +33,7 @@ game.StarterGui:SetCore(
 }
 )
 local L_3_ = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local L_4_ = L_3_.CreateLib("DYKUWARE", "Midnight")
+local L_4_ = L_3_.CreateLib("DYKUWARE", "Sentinel")
 local L_5_ = L_4_:NewTab("aimlock")
 local L_6_ = L_5_:NewSection("aimlock")
 L_6_:NewButton(
@@ -252,43 +252,9 @@ local L_7_ = L_4_:NewTab("silent")
 local L_8_ = L_7_:NewSection("silent")
 L_8_:NewButton(
     "silent",
-    "key is t.",
+    "key is e.",
     function()
 	loadstring(game:HttpGet("https://pastebin.com/raw/CaXVUcrp", true))()
-end
-)
-L_8_:NewTextBox(
-    "silent pre",
-    "0.157 for low ping 0.178 high ping",
-    function(L_72_arg0)
-	DaHoodSettings.Prediction = L_72_arg0
-end
-)
-L_8_:NewDropdown(
-    "silent aim part",
-    "where u gon shoot",
-    {
-	"Head",
-	"UpperTorso",
-	"HumanoidRootPart",
-	"LowerTorso"
-},
-    function(L_73_arg0)
-	Aiming.TargetPart = L_73_arg0
-end
-)
-L_8_:NewTextBox(
-    "silent aim fov",
-    "field of view",
-    function(L_74_arg0)
-	Aiming.FOV = L_74_arg0
-end
-)
-L_8_:NewToggle(
-    "silent aim show fov",
-    "show fov or na nigga",
-    function(L_75_arg0)
-	Aiming.ShowFOV = L_75_arg0
 end
 )
 local L_11_ = L_4_:NewTab("antilock")
