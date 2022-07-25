@@ -432,5 +432,3 @@ end
 local L_13_ = L_4_:NewTab("credits")
 local L_14_ = L_13_:NewSection("credits")
 local L_14_ = L_13_:NewSection("creator:dyku#1713")
-end
-)
