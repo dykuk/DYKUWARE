@@ -439,6 +439,10 @@ local Tab3 = Window:Tab("extra",false)
 Tab3:Label("extra")
 end
 )
+
+
+
+
 Tab3:Button("FLY (X)",function(bool)
     loadstring(game:HttpGet("https://pastebin.com/raw/sUA9m6M6"))()
 end)
